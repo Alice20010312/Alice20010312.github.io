@@ -4,19 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>Hexo</title>
+  <title>图的遍历 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="1title: 图的遍历    文章目录定义深度优先遍历广度优先遍历测试代码定义从图中某一顶点出发访遍图中其余顶点，且使每一个顶点仅被访问一次，这一过程就叫做图的遍历（Traversing Graph）。 深度优先遍历深度优先遍历（Depth_First_Search）,也有称深度优先搜索，简称DFS。 为了理解深度优先遍历，用一个小游戏来说明。假设你要完成一个任务，要求在如图1-1中的左图中这样">
+  <meta name="description" content="文章目录**定义深度优先遍历广度优先遍历测试代码定义从图中某一顶点出发访遍图中其余顶点，且使每一个顶点仅被访问一次，这一过程就叫做图的遍历（Traversing Graph）。 深度优先遍历深度优先遍历（Depth_First_Search）,也有称深度优先搜索，简称DFS。 为了理解深度优先遍历，用一个小游戏来说明。假设你要完成一个任务，要求在如图1-1中的左图中这样的一个迷宫中，从顶点A开始要">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="图的遍历">
 <meta property="og:url" content="http://example.com/2021/08/05/%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1title: 图的遍历    文章目录定义深度优先遍历广度优先遍历测试代码定义从图中某一顶点出发访遍图中其余顶点，且使每一个顶点仅被访问一次，这一过程就叫做图的遍历（Traversing Graph）。 深度优先遍历深度优先遍历（Depth_First_Search）,也有称深度优先搜索，简称DFS。 为了理解深度优先遍历，用一个小游戏来说明。假设你要完成一个任务，要求在如图1-1中的左图中这样">
+<meta property="og:description" content="文章目录**定义深度优先遍历广度优先遍历测试代码定义从图中某一顶点出发访遍图中其余顶点，且使每一个顶点仅被访问一次，这一过程就叫做图的遍历（Traversing Graph）。 深度优先遍历深度优先遍历（Depth_First_Search）,也有称深度优先搜索，简称DFS。 为了理解深度优先遍历，用一个小游戏来说明。假设你要完成一个任务，要求在如图1-1中的左图中这样的一个迷宫中，从顶点A开始要">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200716101601742.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW5nanVueWVz,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200716121503675.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW5nanVueWVz,size_16,color_FFFFFF,t_70">
-<meta property="article:published_time" content="2021-08-05T12:32:28.399Z">
-<meta property="article:modified_time" content="2021-08-05T12:34:14.948Z">
+<meta property="article:published_time" content="2021-08-05T13:00:35.000Z">
+<meta property="article:modified_time" content="2021-08-05T13:04:35.284Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200716101601742.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW5nanVueWVz,size_16,color_FFFFFF,t_70">
@@ -79,20 +79,26 @@
         <section id="main"><article id="post-图的遍历" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/08/05/%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86/" class="article-date">
-  <time class="dt-published" datetime="2021-08-05T12:32:28.399Z" itemprop="datePublished">2021-08-05</time>
+  <time class="dt-published" datetime="2021-08-05T13:00:35.000Z" itemprop="datePublished">2021-08-05</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      图的遍历
+    </h1>
+  
+
+      </header>
+    
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title: 图的遍历</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>文章目录</strong><br><strong>定义</strong><br>深度优先遍历<br>广度优先遍历<br>测试代码<br><strong>定义</strong><br><strong>从图中某一顶点出发访遍图中其余顶点，且使每一个顶点仅被访问一次，这一过程就叫做图的遍历（Traversing Graph）。</strong></p>
+        <p>文章目录**<br><strong>定义</strong><br>深度优先遍历<br>广度优先遍历<br>测试代码<br><strong>定义</strong><br><strong>从图中某一顶点出发访遍图中其余顶点，且使每一个顶点仅被访问一次，这一过程就叫做图的遍历（Traversing Graph）。</strong></p>
 <p><strong>深度优先遍历</strong><br><strong>深度优先遍历（Depth_First_Search）,也有称深度优先搜索，简称DFS</strong>。</p>
 <p>为了理解深度优先遍历，用一个小游戏来说明。<br>假设你要完成一个任务，要求在如图1-1中的左图中这样的一个迷宫中，从顶点A开始要走遍所有的图顶点并做上标记，注意不是简单地看着这样的平面图走哦。而是如同现实般地只有高墙和通道的迷宫中去完成任务</p>
 <p><img src="https://img-blog.csdnimg.cn/20200716101601742.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW5nanVueWVz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
@@ -109,13 +115,13 @@
 <p><strong>广度优先遍历主要思想：</strong></p>
 <p>首先以一个未被访问过的顶点作为起始顶点，访问其所有相邻的顶点，然后对每个相邻的顶点，再访问它们相邻的未被访问过的顶点，直到所有顶点都被访问过，遍历结束。</p>
 <p>则代码如下</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#include&lt;iostream&gt;             //广度优先遍历</span><br><span class="line">#include&lt;queue&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int book[100], sum, n, e[100][100];</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int m, a, b;</span><br><span class="line">	queue&lt;int&gt; q;</span><br><span class="line">	cin &gt;&gt; m &gt;&gt; n;</span><br><span class="line">	//初始化二维矩阵</span><br><span class="line">	for (int i = 1; i &lt;= m; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		for (int j = 1; j &lt;= n; ++j)</span><br><span class="line">		&#123;</span><br><span class="line">			if (i == j)</span><br><span class="line">				e[i][j] = 0;</span><br><span class="line">			else</span><br><span class="line">				e[i][j] = 99999999;   //假设99999999为正无穷</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	for (int i = 1; i &lt;= m; ++i)     //读入顶点间的边</span><br><span class="line">	&#123;</span><br><span class="line">		cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">		e[a][b] = 1;   </span><br><span class="line">		e[b][a] = 1;	//因为是无向图</span><br><span class="line">	&#125;</span><br><span class="line">	q.push(1);</span><br><span class="line">	book[1] = 1;</span><br><span class="line">	cout &lt;&lt; &quot;1&quot; &lt;&lt; &quot; &quot;;</span><br><span class="line">	while (!q.empty())</span><br><span class="line">	&#123;</span><br><span class="line">		for (int i = 1; i &lt;= n; ++i)</span><br><span class="line">		&#123;</span><br><span class="line">			if (e[q.front()][i] == 1 &amp;&amp; book[i] == 0)</span><br><span class="line">			&#123;</span><br><span class="line">				book[i] = 1;</span><br><span class="line">				q.push(i);</span><br><span class="line">				cout &lt;&lt; i &lt;&lt; &quot; &quot;;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		q.pop();</span><br><span class="line">	&#125;</span><br><span class="line">	system(&quot;pause&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;             //广度优先遍历</span><br><span class="line">#include&lt;queue&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int book[100], sum, n, e[100][100];</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int m, a, b;</span><br><span class="line">	queue&lt;int&gt; q;</span><br><span class="line">	cin &gt;&gt; m &gt;&gt; n;</span><br><span class="line">	//初始化二维矩阵</span><br><span class="line">	for (int i = 1; i &lt;= m; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		for (int j = 1; j &lt;= n; ++j)</span><br><span class="line">		&#123;</span><br><span class="line">			if (i == j)</span><br><span class="line">				e[i][j] = 0;</span><br><span class="line">			else</span><br><span class="line">				e[i][j] = 99999999;   //假设99999999为正无穷</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	for (int i = 1; i &lt;= m; ++i)     //读入顶点间的边</span><br><span class="line">	&#123;</span><br><span class="line">		cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">		e[a][b] = 1;   </span><br><span class="line">		e[b][a] = 1;	//因为是无向图</span><br><span class="line">	&#125;</span><br><span class="line">	q.push(1);</span><br><span class="line">	book[1] = 1;</span><br><span class="line">	cout &lt;&lt; &quot;1&quot; &lt;&lt; &quot; &quot;;</span><br><span class="line">	while (!q.empty())</span><br><span class="line">	&#123;</span><br><span class="line">		for (int i = 1; i &lt;= n; ++i)</span><br><span class="line">		&#123;</span><br><span class="line">			if (e[q.front()][i] == 1 &amp;&amp; book[i] == 0)</span><br><span class="line">			&#123;</span><br><span class="line">				book[i] = 1;</span><br><span class="line">				q.push(i);</span><br><span class="line">				cout &lt;&lt; i &lt;&lt; &quot; &quot;;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		q.pop();</span><br><span class="line">	&#125;</span><br><span class="line">	system(&quot;pause&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/08/05/%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86/" data-id="ckrywl4bm0001ykuw8erz5bw4" data-title="" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/08/05/%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86/" data-id="ckrywl4bm0001ykuw8erz5bw4" data-title="图的遍历" class="article-share-link">Share</a>
       
       
       
@@ -126,9 +132,9 @@
 <nav id="article-nav">
   
   
-    <a href="/2021/08/05/%E4%B8%87%E8%83%BD%E6%90%9C%E7%B4%A2/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/08/05/%E4%B8%87%E8%83%BD%E6%90%9C%E7%B4%A2-1/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title"></div>
+      <div class="article-nav-title">万能搜索</div>
     </a>
   
 </nav>
@@ -166,11 +172,11 @@
       <ul>
         
           <li>
-            <a href="/2021/08/05/%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86/">(no title)</a>
+            <a href="/2021/08/05/%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86/">图的遍历</a>
           </li>
         
           <li>
-            <a href="/2021/08/05/%E4%B8%87%E8%83%BD%E6%90%9C%E7%B4%A2/">(no title)</a>
+            <a href="/2021/08/05/%E4%B8%87%E8%83%BD%E6%90%9C%E7%B4%A2-1/">万能搜索</a>
           </li>
         
           <li>
